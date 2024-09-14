@@ -9,7 +9,7 @@ on:
         default: 5
 
 jobs:
-  run-python:
+  doing-lesson:
     runs-on: ubuntu-latest
 
     steps:
