@@ -3,8 +3,7 @@ name: Duolingo Streak Keeper
 on:
   # Schedule to run at specific times (using cron)
   schedule:
-    - cron: '*/5 * * * *'  # run every 5 minutes
-    - cron: '1 */6 * * *'  # run every 6 hours every day
+    - cron: '0 */6 * * *'  # run every 6 hours every day
 
 jobs:
   doing-lesson:
