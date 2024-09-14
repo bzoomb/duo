@@ -1,0 +1,23 @@
+name: Duolingo XP Gainer
+
+on:
+  workflow_dispatch:
+    inputs:
+      lessons:
+        description: 'Number of lessons to complete'
+        required: true
+        default: 5
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Run the Python script with secrets and lessons input
+      - name: Run Duolingo XP Gainer
+        run: python duo.py ${{ github.event.inputs.lessons }}
+        env:
+          DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
