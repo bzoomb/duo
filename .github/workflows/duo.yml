@@ -18,6 +18,6 @@ jobs:
 
       # Run the Python script with secrets and lessons input
       - name: Run Duolingo XP Gainer
-        run: python duo.py ${{ github.event.inputs.lessons }}
+        run: python -u duo.py ${{ github.event.inputs.lessons }}
         env:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
