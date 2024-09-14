@@ -1,14 +1,6 @@
 name: Duolingo XP Gainer
 
 on:
-  # Schedule to run at specific times (using cron)
-  schedule:
-    - cron: '0 21 * * *'  # 4:00 AM WIB
-    - cron: '0 5 * * *'   # 12:00 PM WIB
-    - cron: '0 11 * * *'  # 6:00 PM WIB
-    - cron: '0 14 * * *'  # 9:00 PM WIB
-    - cron: '20 3 * * *'   # 10:05 AM WIB
-
   # Allow manual triggering
   workflow_dispatch:
     inputs:
