@@ -1,4 +1,4 @@
-name: Duolingo XP Gainer
+name: Duolingo Streak Keeper
 
 on:
   # Schedule to run at specific times (using cron)
