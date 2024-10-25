@@ -69,12 +69,12 @@ try:
         session_update_url = f"https://www.duolingo.com/2017-06-30/sessions/{session['id']}"
         session_update_payload = {
             **session,
-            "heartsLeft": 0,
+            "heartsLeft": 3,
             "startTime": (datetime.now().timestamp() - 60),
-            "enableBonusPoints": False,
             "endTime": datetime.now().timestamp(),
             "failed": False,
-            "maxInLessonStreak": 9,
+            "enableBonusPoints": True,
+            "maxInLessonStreak": 15,
             "shouldLearnThings": True
         }
         update_response = requests.put(session_update_url, headers=headers, json=session_update_payload)
