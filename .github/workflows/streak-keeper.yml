@@ -15,6 +15,6 @@ jobs:
 
       # Run the Python script with secrets and lessons input
       - name: Run Duolingo XP Gainer
-        run: python -u duo.py 50
+        run: python -u duo.py 500
         env:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
